@@ -1,7 +1,7 @@
 # EasyQuisyServer
 
 API for EasyQuisyApp.<br/>
-Java Spring Boot, Maven.<br/>
+Java Spring Boot, Maven. MongoDB. <br/>
 Automatically deployed to Heroku: http://easy-quisy-api.herokuapp.com.
 
 ## <code>GET</code> routes
