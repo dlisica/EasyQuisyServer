@@ -42,6 +42,11 @@ public class PlayerController {
 
 	@PostMapping("/insert")
 	public ResponseEntity<Player> insertPlayer(@RequestBody Player player) {
+		Player existingPlayer = playerService.getPlayerByUsername(player.getUsername());
+
+		if (existingPlayer != null)
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
 		player = playerService.insertPlayer(player);
 		return new ResponseEntity<>(player, HttpStatus.OK);
 	}
